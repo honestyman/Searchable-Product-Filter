@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
+import MousePointerTracker from './MousePointerTracker';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -17,9 +18,9 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <Calculator />,
+    <MousePointerTracker />,
     document.getElementById('root')
-)
+);
 
 registerServiceWorker();
 /*
@@ -27,10 +28,17 @@ ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 */
 
-/* Searchable Product Details Filter
+/* Searchable Product Details Filter - Thinking in React
 ReactDOM.render(
     <FilterableProductTable
         products={PRODUCTS}
     />, document.getElementById('root')
 );
+*/
+
+/* Temperature Calculator - Lifting Up State
+ReactDOM.render(
+    <Calculator />,
+    document.getElementById('root')
+)
 */
