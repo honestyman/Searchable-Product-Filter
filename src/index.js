@@ -6,6 +6,8 @@ import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
 import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTracker';
 import ComponentNeedingStorage from './anotherRenderPropsEx/ComponentNeedingStorage';
+import FileInput from './uncontrolled-components/FileInput';
+import NameForm from './uncontrolled-components/NameForm';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -20,9 +22,9 @@ const PRODUCTS = [
 
 ReactDOM.render(
     <React.Fragment>
-        <MousePointerTracker />
-        <AnotherMousePointerTracker />
-        <ComponentNeedingStorage />
+        <NameForm />
+        <br/>
+        <FileInput />
     </React.Fragment>,
     document.getElementById('root')
 );
@@ -46,4 +48,15 @@ ReactDOM.render(
     <Calculator />,
     document.getElementById('root')
 )
+*/
+
+/* Render Props - Mouse Pointer Tracker and Storage examples
+ReactDOM.render(
+    <React.Fragment>
+        <MousePointerTracker />
+        <AnotherMousePointerTracker />
+        <ComponentNeedingStorage />
+    </React.Fragment>,
+    document.getElementById('root')
+);
 */
