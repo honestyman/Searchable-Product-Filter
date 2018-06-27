@@ -23,7 +23,7 @@ function tryConvert(temperature, convertFunc) {
         return ''; //returning empty string if temperature input is Not a Number
     }
     const output = convertFunc(input);
-    const roundedOutput = Math.round(output * 1000 ) / 1000; //TODO check why this
+    const roundedOutput = Math.round(output * 1000 ) / 1000; //TODO check why this - reason above
     return roundedOutput.toString();
 }
 
@@ -108,7 +108,7 @@ class Calculator extends React.Component {
                     onTemperatureChange={this.handleFahrenheitChange}
                 />
                 <BoilingVerdict 
-                    celsius={parseFloat(celsius)} //TODO check why this
+                    celsius={parseFloat(celsius)} //TODO check why this - celsius returned in string format
                 />
             </div>
         )
