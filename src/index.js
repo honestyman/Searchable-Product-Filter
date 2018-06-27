@@ -5,6 +5,7 @@ import App from './App';
 import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
 import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTracker';
+import ComponentNeedingStorage from './anotherRenderPropsEx/ComponentNeedingStorage';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -21,6 +22,7 @@ ReactDOM.render(
     <React.Fragment>
         <MousePointerTracker />
         <AnotherMousePointerTracker />
+        <ComponentNeedingStorage />
     </React.Fragment>,
     document.getElementById('root')
 );
