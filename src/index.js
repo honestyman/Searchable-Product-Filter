@@ -8,8 +8,9 @@ import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTr
 import ComponentNeedingStorage from './anotherRenderPropsEx/ComponentNeedingStorage';
 import FileInput from './uncontrolled-components/FileInput';
 import NameForm from './uncontrolled-components/NameForm';
+import Username from './functional-components/Username';
+import { BlueButton, ButtonWithEvent } from './functional-components/Button';
 import registerServiceWorker from './registerServiceWorker';
-
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -22,9 +23,13 @@ const PRODUCTS = [
 
 ReactDOM.render(
     <React.Fragment>
-        <NameForm />
+        <Username username='Zain Pathan' />
+        <BlueButton onClick={() => {
+            alert('Blue Button clicked');
+        }}/>
         <br/>
-        <FileInput />
+        <br/>
+        <ButtonWithEvent name='Zain Pathan'/>
     </React.Fragment>,
     document.getElementById('root')
 );
@@ -56,6 +61,17 @@ ReactDOM.render(
         <MousePointerTracker />
         <AnotherMousePointerTracker />
         <ComponentNeedingStorage />
+    </React.Fragment>,
+    document.getElementById('root')
+);
+*/
+
+/* Uncontrolled Components example
+ReactDOM.render(
+    <React.Fragment>
+        <NameForm />
+        <br/>
+        <FileInput />
     </React.Fragment>,
     document.getElementById('root')
 );
