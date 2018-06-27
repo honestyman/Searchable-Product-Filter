@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import FilterableProductTable from './ProductDetails';
+import Calculator from './TemperatureCalculator';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -16,13 +17,20 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <FilterableProductTable
-        products={PRODUCTS}
-    />, document.getElementById('root')
-);
+    <Calculator />,
+    document.getElementById('root')
+)
 
 registerServiceWorker();
 /*
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+*/
+
+/* Searchable Product Details Filter
+ReactDOM.render(
+    <FilterableProductTable
+        products={PRODUCTS}
+    />, document.getElementById('root')
+);
 */
