@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//import MousePointerTracker from './MousePointerTracker';
 
 /**
  * Render-Props Sample
@@ -41,7 +42,7 @@ class Mouse extends React.Component {
     }
 }
 
-class MousePointerTracker extends React.Component {
+export class MousePointerTracker extends React.Component {
     render() {
         console.log('MousePointerTracker component');
         return (
@@ -54,4 +55,18 @@ class MousePointerTracker extends React.Component {
     }
 }
 
-export default MousePointerTracker;
+//export default MousePointerTracker;
+
+export class AnotherMousePointerTracker extends React.Component {
+    render() {
+        return (            
+            <Mouse render={ ({x,y}) => (
+                <React.Fragment>
+                    <p>This is another component using the Mouse component and render props</p>
+                    <br/>
+                    <p>The position of the mouse is <strong>( {x}, {y} )</strong></p>
+                </React.Fragment>
+            )}/>
+    )
+    }
+}

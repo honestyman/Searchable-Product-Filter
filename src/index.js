@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
-import MousePointerTracker from './MousePointerTracker';
+import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTracker';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -18,7 +18,10 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <MousePointerTracker />,
+    <React.Fragment>
+        <MousePointerTracker />
+        <AnotherMousePointerTracker />
+    </React.Fragment>,
     document.getElementById('root')
 );
 
