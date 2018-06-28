@@ -10,6 +10,7 @@ import FileInput from './uncontrolled-components/FileInput';
 import NameForm from './uncontrolled-components/NameForm';
 import Username from './functional-components/Username';
 import { BlueButton, ButtonWithEvent } from './functional-components/Button';
+import TypingHistory from './pure-component/typing-history';
 import registerServiceWorker from './registerServiceWorker';
 
 const PRODUCTS = [
@@ -22,15 +23,7 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <React.Fragment>
-        <Username username='Zain Pathan' />
-        <BlueButton onClick={() => {
-            alert('Blue Button clicked');
-        }}/>
-        <br/>
-        <br/>
-        <ButtonWithEvent name='Zain Pathan'/>
-    </React.Fragment>,
+    <TypingHistory />,
     document.getElementById('root')
 );
 
@@ -72,6 +65,21 @@ ReactDOM.render(
         <NameForm />
         <br/>
         <FileInput />
+    </React.Fragment>,
+    document.getElementById('root')
+);
+*/
+
+/* Functional Component example
+ReactDOM.render(
+    <React.Fragment>
+        <Username username='Zain Pathan' />
+        <BlueButton onClick={() => {
+            alert('Blue Button clicked');
+        }}/>
+        <br/>
+        <br/>
+        <ButtonWithEvent name='Zain Pathan'/>
     </React.Fragment>,
     document.getElementById('root')
 );
