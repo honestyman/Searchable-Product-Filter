@@ -19,7 +19,7 @@ const withCounter = Component =>
 
         // <React.Fragment>
         //     <h2>Higher Order Component</h2>
-        //     <h3>Content inside the Higher Order component</h3
+        //     <h3>Content inside the Higher Order component</h3>
         //     <Component {...this.state} {...this.props} update={this.update} />
         //     <h3>Content below the Higher Order component call</h3>
         // </React.Fragment>
@@ -32,11 +32,11 @@ const withCounter = Component =>
 
 
         render() {
-            return( 
+            return( // {...this.props} 
                 <React.Fragment>
                     <h2>Higher Order Component</h2>
                     <h3>Content inside the Higher Order component</h3>
-                    <Component {...this.state} {...this.props} update={this.update} />
+                    <Component {...this.state} update={this.update} />
                     <h3>Content below the Higher Order component call</h3>
                 </React.Fragment>
             );
