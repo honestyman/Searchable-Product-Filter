@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
-import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTracker';
+import {MousePointerTracker, AnotherMousePointerTracker } from './renderPropsEx/MousePointerTracker';
 import ComponentNeedingStorage from './anotherRenderPropsEx/ComponentNeedingStorage';
 import FileInput from './uncontrolled-components/FileInput';
 import NameForm from './uncontrolled-components/NameForm';
@@ -12,6 +12,10 @@ import Username from './functional-components/Username';
 import { BlueButton, ButtonWithEvent } from './functional-components/Button';
 import TypingHistory from './pure-component/typing-history';
 import registerServiceWorker from './registerServiceWorker';
+<<<<<<< HEAD
+=======
+import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
+>>>>>>> render-props
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -23,7 +27,19 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <TypingHistory />,
+    //<ComponentNeedingStorage />
+    <React.Fragment>
+        <MousePointerTracker />
+        <AnotherMousePointerTracker />
+        <br/>
+        <CounterComponent 
+            render={ 
+                props => {
+                    return ( <Counter {...props} /> )
+                }
+            }
+        />
+    </React.Fragment>,
     document.getElementById('root')
 );
 
@@ -81,6 +97,13 @@ ReactDOM.render(
         <br/>
         <ButtonWithEvent name='Zain Pathan'/>
     </React.Fragment>,
+    document.getElementById('root')
+);
+*/
+
+/*
+ReactDOM.render(
+    <TypingHistory />,
     document.getElementById('root')
 );
 */
