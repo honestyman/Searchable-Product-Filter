@@ -1,6 +1,6 @@
 import React from 'react';
 
-const withCounter = Component => 
+const withCounter = Component =>
     class HOC extends React.Component {
         constructor(props) {
             super(props);
