@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import FilterableProductTable from './ProductDetails';
 import Calculator from './TemperatureCalculator';
-import {MousePointerTracker, AnotherMousePointerTracker } from './MousePointerTracker';
+import {MousePointerTracker, AnotherMousePointerTracker } from './renderPropsEx/MousePointerTracker';
 import ComponentNeedingStorage from './anotherRenderPropsEx/ComponentNeedingStorage';
 import registerServiceWorker from './registerServiceWorker';
-
+import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -19,10 +19,18 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
+    //<ComponentNeedingStorage />
     <React.Fragment>
         <MousePointerTracker />
         <AnotherMousePointerTracker />
-        <ComponentNeedingStorage />
+        <br/>
+        <CounterComponent 
+            render={ 
+                props => {
+                    return ( <Counter {...props} /> )
+                }
+            }
+        />
     </React.Fragment>,
     document.getElementById('root')
 );

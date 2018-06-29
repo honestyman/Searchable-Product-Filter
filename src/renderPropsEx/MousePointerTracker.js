@@ -35,7 +35,7 @@ class Mouse extends React.Component {
         console.log('currentState : ', currentState);
         return (
             // passing the (x, y) coordinates to this.props.render() function
-            <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
+            <div style={{ height: '100%', border: '1px solid red' }} onMouseMove={this.handleMouseMove}>
                 {this.props.render(currentState)}
             </div>
         )
