@@ -13,6 +13,7 @@ import { BlueButton, ButtonWithEvent } from './functional-components/Button';
 import TypingHistory from './pure-component/typing-history';
 import registerServiceWorker from './registerServiceWorker';
 import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
+import CounterExample from './higher-order-components/CounterHoC';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -24,19 +25,7 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    //<ComponentNeedingStorage />
-    <React.Fragment>
-        <MousePointerTracker />
-        <AnotherMousePointerTracker />
-        <br/>
-        <CounterComponent 
-            render={ 
-                props => {
-                    return ( <Counter {...props} /> )
-                }
-            }
-        />
-    </React.Fragment>,
+    <CounterExample />,
     document.getElementById('root')
 );
 
@@ -101,6 +90,25 @@ ReactDOM.render(
 /*
 ReactDOM.render(
     <TypingHistory />,
+    document.getElementById('root')
+);
+*/
+
+/* Render Props Example
+ReactDOM.render(
+    //<ComponentNeedingStorage />
+    <React.Fragment>
+        <MousePointerTracker />
+        <AnotherMousePointerTracker />
+        <br/>
+        <CounterComponent 
+            render={ 
+                props => {
+                    return ( <Counter {...props} /> )
+                }
+            }
+        />
+    </React.Fragment>,
     document.getElementById('root')
 );
 */
