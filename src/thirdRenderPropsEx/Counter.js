@@ -28,9 +28,11 @@ export class CounterComponent extends React.Component {
     };
 
     render() {
+        console.log('state : ', this.state);
+        console.log('props : ', this.props);
         return this.props.render({
             ...this.state,
-            ...this.props,
+            //...this.props,
             update: this.update
         });
     }
