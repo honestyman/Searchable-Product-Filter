@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a simple Searchable Product Filter created from the "Thinking in React" documentation on React's official website.
 
+It also contains code snippets and samples demonstrating various React features and patterns like Higher Order Components, Pure Components, Render Props and other such features and patterns
+
 The purpose of this project is to demonstrate the working of a simple React app and setting it up using create-react-app starter
 
 Below you will find some information on how to perform common tasks.<br>
