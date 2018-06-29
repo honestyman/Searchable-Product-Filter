@@ -12,10 +12,7 @@ import Username from './functional-components/Username';
 import { BlueButton, ButtonWithEvent } from './functional-components/Button';
 import TypingHistory from './pure-component/typing-history';
 import registerServiceWorker from './registerServiceWorker';
-<<<<<<< HEAD
-=======
 import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
->>>>>>> render-props
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
