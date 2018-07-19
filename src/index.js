@@ -14,6 +14,7 @@ import TypingHistory from './pure-component/typing-history';
 import registerServiceWorker from './registerServiceWorker';
 import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
 import CounterExample from './higher-order-components/CounterHoC';
+import AppSuperCompose from './context/AppSuperComposed';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -25,7 +26,7 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <CounterExample />,
+    <AppSuperCompose />,
     document.getElementById('root')
 );
 
@@ -109,6 +110,13 @@ ReactDOM.render(
             }
         />
     </React.Fragment>,
+    document.getElementById('root')
+);
+*/
+
+/* Higher Order Components Example
+ReactDOM.render(
+    <CounterExample />,
     document.getElementById('root')
 );
 */
