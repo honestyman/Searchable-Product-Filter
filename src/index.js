@@ -19,6 +19,7 @@ import ThemeAppWithoutContext from './context/react-sample-1/ThemeApp';
 import ThemedAppWithContext from './context/react-sample-using-context/ThemedAppWithContext';
 import ThemedAppWDContext from './context/dynamic-context-ex/ThemedAppWDynamicContext';
 import UpdatingContextApp from './context/updating-context-ex/UpdatingContextApp';
+import MultipleContextParentApp from './context/multiple-contexts/MultipleContextParentApp';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -48,6 +49,11 @@ ReactDOM.render(
         <h2>Updating Context</h2>
         <br/>
         <UpdatingContextApp />
+        <br/>
+        <hr/>
+        <h2>Multiple Context being used in a single component</h2>
+        <br/>
+        <MultipleContextParentApp />
         <br/>
         <hr/>
 
