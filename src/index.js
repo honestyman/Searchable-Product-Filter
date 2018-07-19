@@ -17,6 +17,7 @@ import CounterExample from './higher-order-components/CounterHoC';
 import AppSuperCompose from './context/AppSuperComposed';
 import ThemeAppWithoutContext from './context/react-sample-1/ThemeApp';
 import ThemedAppWithContext from './context/react-sample-using-context/ThemedAppWithContext';
+import ThemedAppWDContext from './context/dynamic-context-ex/ThemedAppWDynamicContext';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -33,7 +34,17 @@ ReactDOM.render(
         <br/>
         <ThemeAppWithoutContext />
         <br/>
+        <h2>Themed App With Context</h2>
+        <br/>
         <ThemedAppWithContext />
+        <br/>
+        <hr/>
+        <h2>Themed App with Dynamic Context</h2>
+        <br/>
+        <ThemedAppWDContext />        
+        <br/>
+        <hr/>
+
     </React.Fragment>,
     document.getElementById('root')
 );
