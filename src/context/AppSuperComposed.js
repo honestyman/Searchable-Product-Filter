@@ -4,6 +4,8 @@ import { LanguageProvider, LanguageConsumer } from './LanguageProvider';
 import Composer from 'react-composer';
 import { styles, translations } from './constants';
 
+/* Tutorial link https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b */
+
 function AppSuperComposeRenderer({children}) {
     return (
         <Composer components={[<LanguageProvider />, <ThemeProvider />]}>

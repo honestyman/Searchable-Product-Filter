@@ -15,6 +15,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { CounterComponent, Counter } from './thirdRenderPropsEx/Counter';
 import CounterExample from './higher-order-components/CounterHoC';
 import AppSuperCompose from './context/AppSuperComposed';
+import ThemeAppWithoutContext from './context/react-sample-1/ThemeApp';
+import ThemedAppWithContext from './context/react-sample-using-context/ThemedAppWithContext';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -26,7 +28,13 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <AppSuperCompose />,
+    <React.Fragment>
+        <AppSuperCompose />
+        <br/>
+        <ThemeAppWithoutContext />
+        <br/>
+        <ThemedAppWithContext />
+    </React.Fragment>,
     document.getElementById('root')
 );
 
