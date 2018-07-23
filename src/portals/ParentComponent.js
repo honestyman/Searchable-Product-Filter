@@ -4,6 +4,15 @@ import './ParentComponent.css';
 
 const appRoot = document.getElementById('app-root');
 
+//[https://reactjs.org/docs/portals.html]
+
+/**
+ * Even though a portal can be anywhere in the DOM tree, 
+ * it behaves like a normal React child in every other way. 
+ * Features like context work exactly the same regardless of 
+ * whether the child is a portal, as the portal still exists 
+ * in the React tree regardless of position in the DOM tree.
+ */
 class ParentComponent extends React.Component {
     constructor(props) {
         super(props);
