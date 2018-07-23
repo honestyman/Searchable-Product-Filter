@@ -22,6 +22,7 @@ import UpdatingContextApp from './context/updating-context-ex/UpdatingContextApp
 import MultipleContextParentApp from './context/multiple-contexts/MultipleContextParentApp';
 import ContextWHOCApp from './context/context-with-hoc/ContextWHOCApp';
 import ParentComponent from './portals/ParentComponent';
+import TooltipApp from "./portals/portals-tooltip-ex/TooltipApp";
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -33,8 +34,8 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <ParentComponent />,
-    document.getElementById('app-root')
+    <TooltipApp />,
+    document.getElementById('root')
 );
 
 registerServiceWorker();
@@ -163,5 +164,12 @@ ReactDOM.render(
 
     </React.Fragment>,
     document.getElementById('root')
+);
+*/
+
+/* Portal simple modal example
+ReactDOM.render(
+    <ParentComponent />,
+    document.getElementById('app-root')
 );
 */
