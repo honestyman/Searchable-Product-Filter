@@ -26,7 +26,8 @@ class ParentComponent extends React.Component {
 
     render() {
         return (
-            <div onClick={this.handleClick}>
+            // onClick={this.handleClick}
+            <div > 
                 <p>Number of clicks: {this.state.clicks}</p>
                 <p>
                     Open up the browser DevTools
@@ -35,21 +36,21 @@ class ParentComponent extends React.Component {
                     with the onClick handler
                 </p>
                 <ModalComponent>
-                    <Child/>
+                    <Child btnClick={this.handleClick}/>
                 </ModalComponent>
             </div>
         );
     }
 }
 
-function Child() {
+function Child(props) {
     /**
      * The click event on this button will bubble up to the parent
      * because there is not 'onClick' attribute defined
      */
     return (
         <div className="modal">
-            <button>Click</button>
+            <button onClick={props.btnClick}>Click</button>
         </div>
     );
 };
