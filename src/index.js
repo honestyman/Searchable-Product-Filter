@@ -21,6 +21,7 @@ import ThemedAppWDContext from './context/dynamic-context-ex/ThemedAppWDynamicCo
 import UpdatingContextApp from './context/updating-context-ex/UpdatingContextApp';
 import MultipleContextParentApp from './context/multiple-contexts/MultipleContextParentApp';
 import ContextWHOCApp from './context/context-with-hoc/ContextWHOCApp';
+import ParentComponent from './portals/ParentComponent';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -32,39 +33,8 @@ const PRODUCTS = [
 ];
 
 ReactDOM.render(
-    <React.Fragment>
-        <AppSuperCompose />
-        <br/>
-        <ThemeAppWithoutContext />
-        <br/>
-        <h2>Themed App With Context</h2>
-        <br/>
-        <ThemedAppWithContext />
-        <br/>
-        <hr/>
-        <h2>Themed App with Dynamic Context</h2>
-        <br/>
-        <ThemedAppWDContext />        
-        <br/>
-        <hr/>
-        <h2>Updating Context</h2>
-        <br/>
-        <UpdatingContextApp />
-        <br/>
-        <hr/>
-        <h2>Multiple Context being used in a single component</h2>
-        <br/>
-        <MultipleContextParentApp />
-        <br/>
-        <hr/>
-        <h2>Context used with HOC</h2>
-        <br/>
-        <ContextWHOCApp />
-        <br/>
-        <hr/>
-
-    </React.Fragment>,
-    document.getElementById('root')
+    <ParentComponent />,
+    document.getElementById('app-root')
 );
 
 registerServiceWorker();
@@ -154,6 +124,44 @@ ReactDOM.render(
 /* Higher Order Components Example
 ReactDOM.render(
     <CounterExample />,
+    document.getElementById('root')
+);
+*/
+
+/* Context Example - multiple
+ReactDOM.render(
+    <React.Fragment>
+        <AppSuperCompose />
+        <br/>
+        <ThemeAppWithoutContext />
+        <br/>
+        <h2>Themed App With Context</h2>
+        <br/>
+        <ThemedAppWithContext />
+        <br/>
+        <hr/>
+        <h2>Themed App with Dynamic Context</h2>
+        <br/>
+        <ThemedAppWDContext />        
+        <br/>
+        <hr/>
+        <h2>Updating Context</h2>
+        <br/>
+        <UpdatingContextApp />
+        <br/>
+        <hr/>
+        <h2>Multiple Context being used in a single component</h2>
+        <br/>
+        <MultipleContextParentApp />
+        <br/>
+        <hr/>
+        <h2>Context used with HOC</h2>
+        <br/>
+        <ContextWHOCApp />
+        <br/>
+        <hr/>
+
+    </React.Fragment>,
     document.getElementById('root')
 );
 */
