@@ -46,6 +46,10 @@ class TemperatureInput extends React.Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        props.propObj.temp = 150;
+        console.log('props : ', props);
+        props.propsArr.push(10);
+        console.log('props : ', props);
     }
 
     handleChange(e) {
@@ -95,17 +99,29 @@ class Calculator extends React.Component {
         const celsius = ( scale === 'f' ? tryConvert(temperature, toCelsius) : temperature );
         const fahrenheit = ( scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature );
 
+
+        const propObj = {
+            name: 'Calculator',
+            property: 'Provide details',
+            temp: 100
+        };
+
+        const propsArr = [1, 2, 3];
         return(
             <div>
                 <TemperatureInput 
                     scale='c'
                     temperature={celsius}
                     onTemperatureChange={this.handleCelsiusChange}
+                    propObj={propObj}
+                    propsArr={propsArr}
                 />
                 <TemperatureInput 
                     scale='f'
                     temperature={fahrenheit}
                     onTemperatureChange={this.handleFahrenheitChange}
+                    propObj={propObj}
+                    propsArr={propsArr}
                 />
                 <BoilingVerdict 
                     celsius={parseFloat(celsius)} //TODO check why this - celsius returned in string format
